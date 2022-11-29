@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.http import HttpResponse
+from django.template import loader
+import os
+import  sys
+def MainPage(request):
+    with open(os.path.join(sys.path[0], "mysite\Main.html"), "r") as f:
+        return HttpResponse(f.read())
+
 
 urlpatterns = [
+    path('', MainPage),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
