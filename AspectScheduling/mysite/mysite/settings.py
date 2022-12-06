@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'InfoPage.apps.InfopageConfig',
     'polls.apps.PollsConfig',
     "django.contrib.admin",
     "django.contrib.auth",
