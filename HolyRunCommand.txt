@@ -1,4 +1,4 @@
-source venv/bin/activate
+source venv/bin/activate //not needed now
 python manage.py runserver - runs the thingy thing
 
 //for workspace
