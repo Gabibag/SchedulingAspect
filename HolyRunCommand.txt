@@ -5,3 +5,6 @@ python manage.py runserver - runs the thingy thing
 cd /workspaces/SchedulingAspect/AspectScheduling/mysite
 python manage.py runserver
 open in browser from popup
+
+or 
+sh startup.sh

@@ -1,60 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
+<header>
+    <title> Main Page</title>
     <style>
-        .Page{
-            position:absolute;
-            top:0px;
-            right:0px;
-            bottom:0px;
-            left:0px;
-            background-color: #003049;
-            border-radius: 25px; 
-            padding-top: 10px;
-            padding-bottom: 60px;
-            padding-right: 30px;
-            padding-left: 80px;
-        }
-        .TopBar{
-            display: inline-block;
-            margin: 0 auto;
-            padding: 3px;
-            
-        }
-        .CenterContent{
-            background-color: #F77F00;
-            border-radius: 25px; 
-            padding: 15px;
-            margin-top: 35px;
-            margin-top: 35px;
-        }
-        /*todo make this look good cant be bothered rn tbh and add in static gear image from site, static iamges are set up*/ 
-        .SettingsButton{
-        background: #ededed;
-        border: 1px solid #ccc;
-        padding: 10px 30px;
-        border-radius: 3px;
-        cursor: pointer;
-        padding: 20px;
-        border-radius: 15px; 
-        background-color: #003048;
-        border-width: medium;
-        border-color: #647C90;
-        -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-        -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-    box-shadow: inset 0px 0px 5px #c1c1c1;
-      outline: none;
-        }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+    }
+    li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.center{
+  background-color: aqua;
+}
     </style>
-<title>AspectSchu</title>
-</head>
+</header>
 <body>
-    <div class = "Page">
-        <div class = "TopBar">
-            <button type = "button"; class = "SettingsButton";></button>
-        </div>
-        <div class = "CenterContent">
-        </div>
-    </div>
+    <ul>
+        <li><a href = "/Login">Login</a></li>
+        <li><a href = "/student/home">Home</a></li>
+        <li><a href = "/acounts/logout">logout</a></li.>
+    </ul>
+    <div class = "Ceneter"></div>
 </body>
-</html>

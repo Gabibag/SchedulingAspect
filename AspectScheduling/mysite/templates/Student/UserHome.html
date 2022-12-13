@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .Page {
+      opacity: 0.99;
+      text-align: center;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      background-color: #003049;
+      border-radius: 25px;
+      padding-top: 10px;
+      padding-bottom: 60px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    .TopBar {
+      width: 50%;
+      transition-duration: 0.2s;
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      padding: 3px;
+/*    flex-wrap: nowrap; Removed flex cuz that offcentered the thing, idk what flex does soooo uh
+      display: flex;*/
+      justify-content: space-between;
+      font-family: "Quicksand", "serif";
+      color: white;
+      cursor: default;
+    }
+    .TopBar:hover{
+      text-shadow: 4px 4px 5px #000000;
+      text-align: center;
+      transform: scale(1.05);
+      display: inline-block;
+      margin: 0 auto;
+      padding: 3px;
+/*    flex-wrap: nowrap; Removed flex cuz that offcentered the thing, idk what flex does soooo uh
+      display: flex;*/ 
+      justify-content: space-between;
+      font-family: "Quicksand", "serif";
+      color: white;
+      cursor: default;
+    }
+
+    .CenterContent {
+      flex-wrap: wrap;
+      opacity: 0.9;
+      display: flex;
+      justify-content: center;
+      background-color: #F77F00;
+      border-radius: 25px;
+      padding: 15px;
+      margin-top: 35px;
+      margin-top: 35px;
+      vertical-align: middle;
+      overflow: hidden;
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
+    }
+
+    .CurrentClasses {
+      display: inline-block;
+      text-align: center;
+      transition-duration: 0.2s;
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
+      background: #D62828;
+      opacity: 0.9;
+      width: 30%;
+      padding: 10px;
+      border-radius: 15px;
+      font-family: "Quicksand", "serif";
+
+    }
+    .CurrentClasses:hover {
+      display: inline-block;
+      text-align: center;
+      transform: scale(1.05);
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
+      background: #D62828;
+      opacity: 0.9;
+      /*TODO make this the color from the pallet*/
+      width: 30%;
+      padding: 10px;
+      border-radius: 15px;
+
+    }
+    /*todo make this look good cant be bothered rn tbh and add in static gear image from site, static iamges are set up*/
+    .SettingsButton {
+      opacity: 0.3;
+      transition-duration: 0.2s;
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
+      background: #ededed;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #003048;
+      border-width: medium;
+      border-color: #647C90;
+      -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+      box-shadow: inset 0px 0px 5px #c1c1c1;
+      outline: none;
+    
+    }
+    /*Hover effect, looks nice, use this for any buttons (that would be nice)*/
+    .SettingsButton:hover{
+      opacity: 0.8;
+      transform: scale(1.05);
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
+      background: #ededed;
+      padding: 20px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 15px;
+      background-color: #003048;
+      border-width: medium;
+      border-color: #647C90;
+      -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+      box-shadow: inset 0px 0px 5px #c1c1c1;
+      outline: none;
+    }
+  </style>
+  <title>AspectSchu</title>
+</head>
+
+<body>
+  <div class="Page">
+    <button type="button" ; class="SettingsButton" ; style="float: left" ;></button> 
+    <!-- So button is kinda messing up the title's center, so uh, we need to fix that-->
+    <div class="TopBar"; style="text-align:center";>
+      <h1>
+      Amador Valley High School <br>
+      [name of our thing]
+      </h1>
+    </div>
+    <div class="CenterContent">
+      <div class="FastSignUp"> </div>
+      <div class="CurrentClasses" ; style="float: left" ;> Text</div>
+    </div>
+  </div>
+</body>
+
+</html>

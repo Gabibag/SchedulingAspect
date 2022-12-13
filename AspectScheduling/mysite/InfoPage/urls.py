@@ -9,6 +9,6 @@ def Redirect(request):
 
 urlpatterns = [
     path('Main', views.Main),
-    #path('Login', ),
+    path('Login', views.Login),
     path('', Redirect),
 ]

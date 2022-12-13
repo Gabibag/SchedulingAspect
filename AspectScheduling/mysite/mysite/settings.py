@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'InfoPage.apps.InfopageConfig',
-    'polls.apps.PollsConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -50,13 +49,17 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
+CSRF_COOKIE_DOMAIN = None
+#TODO figure out this
+CSRF_TRUSTED_ORIGINS = [
+    'https://hibub-idk-supreme-engine-pqwr95jj656h7wgw-8000.preview.app.github.dev'
+]
 ROOT_URLCONF = "mysite.urls"
-
+#TODO make a view which directs to student/teacher/admin page based on acount type
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        'DIRS': [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
