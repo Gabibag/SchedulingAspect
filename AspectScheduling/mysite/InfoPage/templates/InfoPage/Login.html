@@ -1,6 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .passwd{
+        filter: blur(0px);
+        font-family Verdana;
+      }
+      .passwd:focus{
+        filter: blur(1px);
+      }
+    </style>
+  </head>
 
-<form action = "" method = "post">
-  {% csrf_token %}
-  {{form}}
-  <input type="submit" value=Submit>
-</form>
+
+  
+  <form action = "" method = "post">
+    {% csrf_token %}
+      <div class="form">
+        {{form}}
+        <input type="submit" value=Submit>
+      </div>
+  </form>
+  
+</html>
