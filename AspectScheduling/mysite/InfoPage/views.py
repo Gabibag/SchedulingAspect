@@ -22,3 +22,4 @@ def Login(request):
     context = {}
     context['form'] = LoginForm()
     return HttpResponse(template.render(context, request))
+
