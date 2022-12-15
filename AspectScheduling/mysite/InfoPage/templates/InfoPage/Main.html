@@ -2,7 +2,11 @@
 <html>
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap'); 
       .Page {
         opacity: 0.99;
         text-align: center;
@@ -12,32 +16,39 @@
         bottom: 10px;
         left: 10px;
         background-color: #DAD7CD;
-        border-radius: 25px;
-        padding-top: 10px;
+        border-radius: 15px;
+        padding-top: 5px;
         padding-bottom: 60px;
-        padding-right: 40px;
-        padding-left: 40px;
+        /*padding-right: 40px; */
+        /*padding-left: 40px;*/
       }
 
     .TopBar {
-      width: 50%;
+      width: 40%;
       text-align: center;
-      display: inline-block;
+      display: flex;
       margin: auto;
-      padding: 3px;
+      padding: 0px;
   /*    flex-wrap: nowrap; Removed flex cuz that offcentered the thing, idk what flex does soooo uh
       display: flex;*/
-      justify-content: space-between;
-      font-family: "Quicksand", "serif";
-      color: white;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 500;
+      color: #3A5A40;
+      background-color: #DAD7CD;
       cursor: default;
       transition-duration: 0.7s;
-      transition-timing-function: cubic-bezier(.02,-0.15,0,1.03);
-      transition-delay: 0.2s;
+      border-radius: 10px;
+      border-style: hidden;
+      box-shadow: 0px 2px 5px rgb(0 1 0 / 50%) inset;
+      padding: left 40%;;
+      padding: right 40%;;
+      text-align: center;
     }
     .TopBar:hover{
-      text-shadow: 0.1px 0.1px 5px #588157;
-      transition-delay: 0s;
+      /*filter: drop-shadow(1px 1px 1px black);*/
+      box-shadow: 0px 0px 0px rgb(0 1 0 / 50%);
     }
 
     .CenterContent {
@@ -45,47 +56,52 @@
       opacity: 0.9;
       display: flex;
       justify-content: left;
-      background-color: #588157;
+      background-color: #588157b4;
       border-radius: 25px;
       padding: 15px;
       margin-top: 35px;
-      margin-top: 35px;
+      right: 40;
+      left: 40;
+      margin: 40px 40px 40px;
       vertical-align: middle;
       overflow: hidden;
       filter: drop-shadow(3px 3px 2px #2e2e2e);
     }
 
-    .CurrentClasses {
+    .DisplayBoxes { /*Used to be CurrentClasses*/
       display: inline-block;
       text-align: center;
       transition-duration: 0.2s;
-      filter: drop-shadow(3px 3px 2px #2e2e2e);
-      background: #3A5A40;
+      align-items: flex-start;
+      background: #3a5a40ac;
       opacity: 0.9;
       width: 30%;
       padding: 10px;
       border-radius: 15px;
       margin-right: auto;
-      font-family: "Quicksand", "serif";
+      font-family: "Quicksand", sans-serif;
     }
-    .CurrentClasses:hover {
+    .DisplayBoxes:hover { /*Used to be CurrentClasses*/
       transform: scale(1.05);
       filter: drop-shadow(3px 3px 2px #2e2e2e);
       cursor: click;
     }
-    /*todo make this look good cant be bothered rn tbh and add in static gear image from site, static iamges are set up*/
+    /*TODO: make this look good cant be bothered rn tbh and add in static gear image from site, static iamges are set up*/
     .SettingsButton {
-      opacity: 0.3;
+      opacity: 0.72;
+      margin-right: 10px;
+      margin-top: 5px;
       transition-duration: 0.2s;
-      filter: drop-shadow(3px 3px 2px #2e2e2e);
+      /*filter: drop-shadow(3px 3px 2px #2e2e2e);*/
       background: #ededed;
       border: 1px solid #ccc;
       cursor: pointer;
+      top: -10px;
       padding: 20px;
       border-radius: 15px;
-      background-color: #003048;
+      background-color: #3A5A40;
       border-width: medium;
-      border-color: #647C90;
+      border-color: #849888;
       -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
       box-shadow: inset 0px 0px 5px #c1c1c1;
@@ -94,7 +110,7 @@
     }
     /*Hover effect, looks nice, use this for any buttons (that would be nice)*/
     .SettingsButton:hover{
-      opacity: 0.8;
+      opacity: 0.9;
       transform: scale(1.05);
       filter: drop-shadow(3px 3px 2px #2e2e2e);
     }
@@ -107,24 +123,57 @@
       opacity: 1;
       filter: drop-shadow(3px 3px 2px #2e2e2e);
     }
+    .material-symbols-rounded {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    hr{
+      border-style:solid;
+      filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.223));
+      color: #DAD7CD;
+    }
+    h2{
+      padding: 0;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 400;
+      margin: 0;
+      display: flex;
+      text-align: center;
+    }
+    p{
+      padding: 0;
+      color: #DAD7CD;
+      margin: 0 0 0;
+    }
   </style>
   <title>Scheduling</title>
 </head>
-
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <body>
   <div class="Page">
-    <button type="button" ; class="SettingsButton" ; style="float: right" ;></button> 
-    <!-- So button is kinda messing up the title's center, so uh, we need to fix that-->
+    <button type="button" ; class="SettingsButton" ; style="float: right";></button>
+    <!-- TODO: add a settings icon to the thingy i have no idea how this works-->
     <div class="TopBar"; style="text-align:center";>
-      <h1>
+      <h2>
       Amador Valley High School <br>
       [name of our thing]
-      </h1>
+      </h2>
     </div>
+    <hr>
     <div class="CenterContent">
       <div class="FastSignUp"> </div>
-      <div class="CurrentClasses" ; style="float: left" ;> Text</div>
+      <div class="DisplayBoxes" ; style="float: left;justify-content: start;" ;> 
+        <img src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/49f6f6258b21c855fc127e9430c22b80-1664178469/pikachug1/draw-a-cute-chibi-anime-profile-picture-icon-avatar-or-pfp.png" alt="settings Icon" width=50 height=50 style="float:left;border-radius: 50%;
+;";">
+        <p style="text-align:left;display: inline-block;vertical-align: middle;padding:5px";>Test User<br>Sophomore</p>
+      </div>
+      <div class="DisplayBoxes"></div>
     </div>
+    
   </div>
 </body>
 
