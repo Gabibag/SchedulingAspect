@@ -8,3 +8,6 @@ open in browser from popup
 
 or 
 sh startup.sh
+
+for mac
+sh startupM.sh

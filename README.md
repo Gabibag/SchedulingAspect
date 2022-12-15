@@ -1,4 +1,5 @@
 # SchedulingAspect
-Beta for refreshing what is currently a bad Access system
+The student end of FlexiSched is an okay experience, but the teacher end seems to be significantly worse
+This is trying to remedy that be remaking it with a different format, one that will hopefully be much better
 
-Right now does none of what its supposed to except have an admin page. 
+Currently, it doesn't do any of that but display pages.
