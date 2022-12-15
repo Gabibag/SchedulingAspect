@@ -5,10 +5,11 @@ from django.shortcuts import redirect
 from . import views
 
 def Redirect(request):
-    return redirect('/Main')
+    return redirect('/main')
 
 urlpatterns = [
-    path('Main', views.Main),
-    path('Login', views.Login),
+    path('logout', views.Logout),
+    path('main', views.Main),
+    path('login', views.Login),
     path('', Redirect),
 ]

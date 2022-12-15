@@ -4,7 +4,7 @@ from .forms import LoginForm
 from django.template import loader
 from django.shortcuts import redirect
 from django.contrib.auth.models import Permission, User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
             
 def Main(request):
     template = loader.get_template("InfoPage/Main.html")
@@ -22,3 +22,6 @@ def Login(request):
     context = {}
     context['form'] = LoginForm()
     return HttpResponse(template.render(context, request))
+def Logout(request):
+    logout(request)
+    return redirect('/')
