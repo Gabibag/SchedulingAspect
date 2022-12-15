@@ -21,10 +21,9 @@
 
     .TopBar {
       width: 50%;
-      transition-duration: 0.2s;
       text-align: center;
       display: inline-block;
-      margin: 0 auto;
+      margin: auto;
       padding: 3px;
   /*    flex-wrap: nowrap; Removed flex cuz that offcentered the thing, idk what flex does soooo uh
       display: flex;*/
@@ -32,20 +31,13 @@
       font-family: "Quicksand", "serif";
       color: white;
       cursor: default;
+      transition-duration: 0.7s;
+      transition-timing-function: cubic-bezier(.02,-0.15,0,1.03);
+      transition-delay: 0.2s;
     }
     .TopBar:hover{
-      text-shadow: 4px 4px 5px #000000;
-      text-align: center;
-      transform: scale(1.05);
-      display: inline-block;
-      margin: 0 auto;
-      padding: 3px;
-  /*    flex-wrap: nowrap; Removed flex cuz that offcentered the thing, idk what flex does soooo uh
-      display: flex;*/
-      justify-content: space-between;
-      font-family: "Quicksand", "serif";
-      color: white;
-      cursor: default;
+      text-shadow: 0.1px 0.1px 5px #588157;
+      transition-delay: 0s;
     }
 
     .CenterContent {
@@ -73,20 +65,12 @@
       width: 30%;
       padding: 10px;
       border-radius: 15px;
+      margin-right: auto;
       font-family: "Quicksand", "serif";
-      justify-content: center;
     }
     .CurrentClasses:hover {
-      display: inline-block;
-      text-align: center;
       transform: scale(1.05);
       filter: drop-shadow(3px 3px 2px #2e2e2e);
-      background: #3A5A40;
-      opacity: 0.9;
-      /*TODO make this the color from the pallet*/
-      width: 30%;
-      padding: 10px;
-      border-radius: 15px;
       cursor: click;
     }
     /*todo make this look good cant be bothered rn tbh and add in static gear image from site, static iamges are set up*/
@@ -113,26 +97,23 @@
       opacity: 0.8;
       transform: scale(1.05);
       filter: drop-shadow(3px 3px 2px #2e2e2e);
-      background: #ededed;
-      padding: 20px;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      border-radius: 15px;
-      background-color: #3A5A40;
-      border-width: medium;
-      border-color: #647C90;
-      -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-      box-shadow: inset 0px 0px 5px #c1c1c1;
-      outline: none;
+    }
+    .SettingsButton:hover:active{
+      transform: scale(0.9);
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
+    }
+    .SettingsButton:active{
+      transform: scale(0.9);
+      opacity: 1;
+      filter: drop-shadow(3px 3px 2px #2e2e2e);
     }
   </style>
-  <title>AspectSchu</title>
+  <title>Scheduling</title>
 </head>
 
 <body>
   <div class="Page">
-    <button type="button" ; class="SettingsButton" ; style="float: left" ;></button> 
+    <button type="button" ; class="SettingsButton" ; style="float: right" ;></button> 
     <!-- So button is kinda messing up the title's center, so uh, we need to fix that-->
     <div class="TopBar"; style="text-align:center";>
       <h1>
