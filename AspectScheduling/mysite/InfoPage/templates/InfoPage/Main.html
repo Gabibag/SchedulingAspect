@@ -38,7 +38,7 @@
       color: #3A5A40;
       background-color: #DAD7CD;
       cursor: default;
-      transition-duration: 0.7s;
+      transition-duration: 0.3s;
       border-radius: 10px;
       border-style: hidden;
       box-shadow: 0px 2px 5px rgb(0 1 0 / 50%) inset;
@@ -48,7 +48,7 @@
     }
     .TopBar:hover{
       /*filter: drop-shadow(1px 1px 1px black);*/
-      box-shadow: 0px 0px 0px rgb(0 1 0 / 50%);
+      box-shadow: 0px 0px 0px rgb(0 1 0 / 50%) inset;
     }
 
     .CenterContent {
@@ -60,9 +60,9 @@
       border-radius: 25px;
       padding: 15px;
       margin-top: 35px;
+      margin: 40px 40px 40px;
       right: 40;
       left: 40;
-      margin: 40px 40px 40px;
       vertical-align: middle;
       overflow: hidden;
       filter: drop-shadow(3px 3px 2px #2e2e2e);
@@ -75,14 +75,14 @@
       align-items: flex-start;
       background: #3a5a40ac;
       opacity: 0.9;
-      width: 30%;
+      width: 300px;
       padding: 10px;
       border-radius: 15px;
-      margin-right: auto;
+      margin-right: 3%;
       font-family: "Quicksand", sans-serif;
     }
     .DisplayBoxes:hover { /*Used to be CurrentClasses*/
-      transform: scale(1.05);
+      transform: scale(1.01);
       filter: drop-shadow(3px 3px 2px #2e2e2e);
       cursor: click;
     }
@@ -141,9 +141,10 @@
       font-weight: 400;
       margin: 0;
       display: flex;
+      color: #3A5A40 !important;
       text-align: center;
     }
-    p{
+    *{
       padding: 0;
       color: #DAD7CD;
       margin: 0 0 0;
@@ -171,7 +172,7 @@
 ;";">
         <p style="text-align:left;display: inline-block;vertical-align: middle;padding:5px";>Noah Small<br>Sophomore</p>
       </div>
-      <div class="DisplayBoxes"></div>
+      <div class="DisplayBoxes"; style="padding-top: 1.6%;"><p>Previous Sessions: Anime Club: 45</p></div>
     </div>
     
   </div>
