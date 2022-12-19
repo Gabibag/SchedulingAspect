@@ -8,7 +8,7 @@ def Redirect(request):
     return redirect('/Main')
 
 urlpatterns = [
-    path('Main', views.Main),
-    path('Login', views.Login),
+    path('main', views.Main),
+    path('login', views.Login),
     path('', Redirect),
 ]

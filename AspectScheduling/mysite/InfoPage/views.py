@@ -17,9 +17,9 @@ def Login(request):
         user = authenticate(request,username =  u,password = p)
         if not (user is None):
             login(request, user)
-            return redirect('/Login') #Redirects to /Login if it fails
+            return redirect('/login') #Redirects to /Login if it fails
         else:
-            return redirect('/Main')
+            return redirect('/main')
     template = loader.get_template("InfoPage/Login.html")
     context = {}
     context['form'] = LoginForm()
