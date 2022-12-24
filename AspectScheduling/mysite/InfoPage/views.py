@@ -11,16 +11,23 @@ def Main(request):
     context = {}
     return HttpResponse(template.render(context, request))
 def Login(request):
+    error = ''
     if request.POST:
+
         u = request.POST.get('login')
         p = request.POST.get('password')
-        user = authenticate(request,username =  u,password = p)
+        user = authenticate(request, username = u,password = p)
         if not (user is None):
             login(request, user)
-            redirect('/studentApp/home')
+            return redirect('/student/home')
+        else:
+            error = 'Username does not exist'
+            if User.objects.filter(username=u).exists():
+                error = 'Incorrect Password'
     template = loader.get_template("InfoPage/Login.html")
     context = {}
     context['form'] = LoginForm()
+    context['error'] = error
     return HttpResponse(template.render(context, request))
 def Logout(request):
     logout(request)
