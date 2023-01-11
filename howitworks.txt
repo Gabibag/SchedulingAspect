@@ -1,2 +1,4 @@
 admin password is : testing
     SuperUser: TestUser/Aspect
+    Student User: student/Student
+    Teacher = teacher/Teacher

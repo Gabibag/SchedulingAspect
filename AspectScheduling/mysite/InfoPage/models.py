@@ -6,4 +6,4 @@ class User(AbstractUser):
     IdNumber = models.IntegerField(default=-1)
     Teacher = models.BooleanField(default= False)
     Student = models.BooleanField(default= False)
-    Parent = models.BooleanField(default= False)
+    

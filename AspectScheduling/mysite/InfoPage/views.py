@@ -5,6 +5,8 @@ from django.template import loader
 from django.shortcuts import redirect
 from django.contrib.auth.models import Permission, User
 from django.contrib.auth import authenticate, login,logout
+from django.contrib.auth import get_user_model
+User = get_user_model()
     
 def Main(request):
     template = loader.get_template("InfoPage/Main.html")
@@ -19,7 +21,14 @@ def Login(request):
         user = authenticate(request, username = u,password = p)
         if not (user is None):
             login(request, user)
-            return redirect('/studentApp/home')
+            if user.Student:
+                print("Student Acount")
+                return redirect('/student/home')
+            elif user.Teacher:
+                print('teacher acount')
+                return redirect('/teacher/home')
+            else:
+                return redirect('/')
         else:
             con = {'form': LoginForm(), 'error': 'incorrect login'}
             if User.objects.filter(username = u).exists():
