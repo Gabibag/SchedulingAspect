@@ -1,9 +1,13 @@
-<h1>Login</h1>
-<div class = "error message">
-<p style="color:red;">{{error}}</p>
-</div>
+<head>
+  <style>
+
+  </style>
+</head>
+<body>
+<p>{{error}}</p>
 <form action = "" method = "post">
   {% csrf_token %}
   {{form}}
   <input type="submit" value=Submit>
 </form>
+</body>

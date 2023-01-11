@@ -11,10 +11,12 @@ def Main(request):
     context = {}
     return HttpResponse(template.render(context, request))
 def Login(request):
+    error = ''
     if request.POST:
+
         u = request.POST.get('login')
         p = request.POST.get('password')
-        user = authenticate(request,username =  u,password = p)
+        user = authenticate(request, username = u,password = p)
         if not (user is None):
             login(request, user)
             return redirect('/studentApp/home')
