@@ -5,7 +5,7 @@ from django.template import loader
 from django.shortcuts import redirect
 from django.contrib.auth.models import Permission, User
 from django.contrib.auth import authenticate, login,logout
-            
+    
 def Main(request):
     template = loader.get_template("InfoPage/Main.html")
     context = {}
@@ -17,10 +17,18 @@ def Login(request):
         user = authenticate(request,username =  u,password = p)
         if not (user is None):
             login(request, user)
-            redirect('/studentApp/home')
+            return redirect('/studentApp/home')
+        else:
+            con = {'form': LoginForm(), 'error': 'incorrect login'}
+            if User.objects.filter(username = u).exists():
+                con['error'] = 'Invaild Password!'
+            else:
+                con['error'] = 'No user with that username exist'
+            return HttpResponse(loader.get_template("InfoPage/Login.html").render(con, request))
     template = loader.get_template("InfoPage/Login.html")
     context = {}
     context['form'] = LoginForm()
+    context['error'] = ''
     return HttpResponse(template.render(context, request))
 def Logout(request):
     logout(request)

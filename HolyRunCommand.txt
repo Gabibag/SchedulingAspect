@@ -8,3 +8,4 @@ open in browser from popup
 
 or 
 sh startup.sh
+go to https://hibub-idk-supreme-engine-pqwr95jj656h7wgw.github.dev/pf-signin?visibility=private&port=8000&cid=d074d88d186976fbb292a98acfdf1e5a
