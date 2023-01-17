@@ -1,1 +1,59 @@
-<h1> TODO</h1>
+<!DOCTYPE html>
+<head>
+    <style>
+        .Page{
+            background-color: red;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: auto;
+            
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .Content{
+            background-color: aqua;
+            margin: 10px;
+            width: 85%;
+            height: 85%;
+            padding: 20px;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .topbar{
+            overflow: hidden;
+            background-color: azure;
+            padding:5px;
+            width: 100%;
+        }
+        .topbar a{
+            margin: 2px;
+            float: left;
+            text-align: center;
+            background-color: black;
+            padding:14px 16px;
+            color: green;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class = "Page">
+        <div class = topbar> 
+            <a href="/logout">Logout</a>
+            <a href = "/main">Main</a>
+        </div>
+         <div class = "Content">
+            
+         </div>
+    </div>
+</body>

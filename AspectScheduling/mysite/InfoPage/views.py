@@ -13,7 +13,6 @@ def Main(request):
     context = {}
     return HttpResponse(template.render(context, request))
 def Login(request):
-    error = ''
     if request.POST:
 
         u = request.POST.get('login')
