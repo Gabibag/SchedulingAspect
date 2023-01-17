@@ -5,7 +5,7 @@ from django.shortcuts import redirect
 from . import views
 
 def Redirect(request):
-    return redirect('/Main')
+    return redirect('/main')
 
 urlpatterns = [
     path('main', views.Main),
