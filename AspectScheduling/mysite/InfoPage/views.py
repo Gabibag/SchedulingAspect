@@ -21,10 +21,8 @@ def Login(request):
         if not (user is None):
             login(request, user)
             if user.Student:
-                print("Student Acount")
                 return redirect('/student/home')
             elif user.Teacher:
-                print('teacher acount')
                 return redirect('/teacher/home')
             else:
                 return redirect('/')

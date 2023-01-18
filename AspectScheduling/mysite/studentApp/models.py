@@ -7,4 +7,3 @@ class SignUp(models.Model):
     restrictions = models.JSONField(default=dict)
     name = models.TextField(default="Unamed")
     description = models.TextField(default="No description provided")
-
