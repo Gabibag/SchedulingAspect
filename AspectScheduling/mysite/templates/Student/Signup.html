@@ -1,0 +1,26 @@
+<head>
+    <style>
+    table, th, td {
+        border:1px solid black;
+      }
+    </style>
+</head>
+<body>
+<h1> hello {{user}}</h1>
+<table style="width:100%">
+    <tr>
+        <td>Class Name</td>
+        <td>Max Students</td>
+    </tr>
+    {% for class in classes%}
+    <tr>
+        <td>{{class.name}}</td>
+        <td>{{class.max_students}}</td>
+    </tr>
+    
+    
+    
+    {%endfor%}
+</table>
+ 
+</body>
