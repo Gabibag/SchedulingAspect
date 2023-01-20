@@ -1,25 +1,22 @@
 <head>
     <style>
-    table, th, td {
-        border:1px solid black;
-      }
+        .classes{
+            background-color: antiquewhite;
+        }
+        .classBox{
+            background-color: blue;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
 <h1> hello {{user}}</h1>
 <table style="width:100%">
-    <tr>
-        <td>Class Name</td>
-        <td>Max Students</td>
-    </tr>
+    <div class = "classes"></div>
     {% for class in classes%}
-    <tr>
-        <td>{{class.name}}</td>
-        <td>{{class.max_students}}</td>
-    </tr>
-    
-    
-    
+     <div>
+        <a href="/student/signup/{{class.pk}}">{{class.pk}}</a>
+     </div>
     {%endfor%}
 </table>
  
